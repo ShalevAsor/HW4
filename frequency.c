@@ -171,14 +171,14 @@ root->curr = current;
 } else {
 if (root->curr->wordIsDone) {
 root->word[tr]='\0';
-printf("%s %ld \n",root->word,root->curr->count);
+printf("%s %ld\n",root->word,root->curr->count);
 }
 tr--;
 return;
 }
 if (root->curr->wordIsDone) {
 root->word[tr]='\0';
-printf("%s %ld \n",root->word,root->curr->count);
+printf("%s %ld\n",root->word,root->curr->count);
 }
 tr--;
 }
@@ -207,7 +207,7 @@ root->word[tr]=root->curr->letter;
 tr++;
 if (root->curr->wordIsDone) {
 root->word[tr]='\0';
-printf("%s %ld \n",root->word,root->curr->count);
+printf("%s %ld\n",root->word,root->curr->count);
 }
 if (root->curr->isLeaf) {
 for(int i=0; i<NUM_LETTERS;i++) {
