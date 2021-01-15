@@ -156,7 +156,7 @@ return root;
 }
 void print_r(trie* root) {
 static int tr=0;
-char space=' ';
+char space='';
 node* current;
 root->word[tr]=root->curr->letter;
 tr++;
@@ -172,14 +172,14 @@ root->curr = current;
 } else {
 if (root->curr->wordIsDone) {
 root->word[tr]='\0';
-printf("%s %c %ld \n",root->word,space,root->curr->count);
+printf("%s%c%ld \n",root->word,space,root->curr->count);
 }
 tr--;
 return;
 }
 if (root->curr->wordIsDone) {
 root->word[tr]='\0';
-printf("%s %c %ld \n",root->word,space,root->curr->count);
+printf("%s%c%ld \n",root->word,space,root->curr->count);
 }
 tr--;
 }
@@ -203,13 +203,13 @@ print_r(root);
 
 void print(trie* root) {
 static int tr=0;
-char space= ' ';
+char space= '';
 node* current;
 root->word[tr]=root->curr->letter;
 tr++;
 if (root->curr->wordIsDone) {
 root->word[tr]='\0';
-printf("%s %c %ld \n",root->word,space,root->curr->count);
+printf("%s%c%ld \n",root->word,space,root->curr->count);
 }
 if (root->curr->isLeaf) {
 for(int i=0; i<NUM_LETTERS;i++) {
